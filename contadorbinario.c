@@ -17,6 +17,7 @@ bool GPIOdirection(int pino, int direcao);
 bool GPIOWrite(int pino, int valor);
 bool GPIORead(int pino);
 bool GPIOUnexport(int pino);
+int binario(int Vlr,int *pinos){
 int morse(char *palavra);
 int readBtn();
 
@@ -24,22 +25,19 @@ void main()
 {
 
 int contador = 0;
+int pinosLed[4] = {2,3,4,14};
 
 /*  Ler String
 	int 	tamanho = 0;
 	char	aux;
 	char *	texticulo;
-
 	texticulo = (char *)malloc(tamanho);
-
 	do
 	{
 		scanf("%c", &aux);
 		if( aux == '\n' )
 			break;
-
 texticulo = (char *)realloc(texticulo, (tamanho+1)*sizeof(char));
-
 		texticulo[tamanho] = aux;
 		tamanho++;
 	}while(true);
@@ -47,7 +45,6 @@ texticulo = (char *)realloc(texticulo, (tamanho+1)*sizeof(char));
 	printf("%s",texticulo );
 	// Fim leitura String
 	// Exemplo pinos
-
 	GPIOexport(7);
 	GPIOdirection(7, SAIDA);
 	while(1)
@@ -59,7 +56,6 @@ texticulo = (char *)realloc(texticulo, (tamanho+1)*sizeof(char));
 	}
 	GPIOUnexport(7);
 	// Fim pinos
-
 */
 
 
@@ -71,15 +67,23 @@ texticulo = (char *)realloc(texticulo, (tamanho+1)*sizeof(char));
 	
 	GPIOexport(15);
 	GPIOdirection(15, ENTRADA);
+
+	for(i = 0; i < 4; i++){
+		GPIOexport(pinosLed[i]);
+		GPIOdirection(pinosLed[i], SAIDA);
+	}
+	
+
+
+	GPIOWrite(int pino, int valor);
+
 	while(true){
 	
 		if (GPIORead(15) == 1){  // ReadBtn
 			
 			contador++;
-			
+			binario(contador; pinosLed);
 			usleep(1000000);
-	
-			printf("%d", contador); 
 		}
 	
 	}
@@ -312,6 +316,26 @@ int readBtn(){
 }
 
 
+int binario(int Vlr,int *pinos){
+int i = 0;
+int vetor[4] = {0,0,0,0};
+
+while(Vlr >= 1){
+
+    if(Vlr%2 == 1){
+        vetor[i] = 1;
+    }else{
+        vetor[i] = 0;
+    }
+
+    Vlr = Vlr/2;
+    i++;
+}
+
+for(i = 3; i >= 0 ;i--)
+	GPIOWrite(pinos[i],vetor[i]);
+
+}
 
 
 
