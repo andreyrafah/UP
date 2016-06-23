@@ -42,54 +42,94 @@ int display(int vlr){
 
 switch (vlr){
 case 1:
-	printf("   \n");
-	printf("  |\n");
-	printf("  |\n");
+    GPIOWrite(a,LOW);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 2:
-	printf(" _ \n");
-	printf(" _|\n");
-	printf("|_ \n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 3:
-	printf(" _ \n");
-	printf(" _|\n");
-	printf(" _|\n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 4:
-	printf("   \n");
-	printf("|_|\n");
-	printf("  |\n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 5:
-	printf(" _ \n");
-	printf("|_ \n");
-	printf(" _|\n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 6:
-	printf(" _ \n");
-	printf("|_ \n");
-	printf("|_|\n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 7:
-	printf(" _ \n");
-	printf("  |\n");
-	printf("  |\n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 8:
-	printf(" _ \n");
-	printf("|_|\n");
-	printf("|_|\n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 9:
-	printf(" _ \n");
-	printf("|_|\n");
-	printf("  |\n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 case 0:
-	printf(" _ \n");
-	printf("| |\n");
-	printf("|_|\n");
+    GPIOWrite(a,HIGH);
+    GPIOWrite(b,LOW);
+    GPIOWrite(c,LOW);
+    GPIOWrite(d,LOW);
+    GPIOWrite(e,LOW);
+    GPIOWrite(f,LOW);
+    GPIOWrite(g,LOW);	
 	break;
 default:
     printf("não encontrado ");
